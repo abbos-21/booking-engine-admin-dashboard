@@ -355,6 +355,7 @@ onMounted(async () => {
                         "
                       >
                         <Input
+                          class="w-3/4"
                           type="file"
                           accept="image/*"
                           @change="
@@ -364,7 +365,7 @@ onMounted(async () => {
                           "
                         />
 
-                        <Button type="submit">Submit</Button>
+                        <Button type="submit" class="mt-2 float-right">Submit</Button>
                       </form>
                     </DialogContent>
                   </Dialog>

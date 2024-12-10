@@ -205,6 +205,19 @@ const ApiService = {
       throw error
     }
   },
+
+  getAllBookings: async (token: string | null) => {
+    try {
+      const response = await axios.get(`${API_URL}/info/bookings`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return response.data
+    } catch (error: any) {
+      console.error('Error getting all bookings: ', error)
+    }
+  },
 }
 
 export default ApiService
